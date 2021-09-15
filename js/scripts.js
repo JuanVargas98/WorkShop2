@@ -1,4 +1,4 @@
-var rowId;
+var rowId = 0;
 document.getElementById("petsave-button").onclick = function updateTable(){
     rowId += 1
     let petData = {
@@ -14,4 +14,10 @@ document.getElementById("petsave-button").onclick = function updateTable(){
         petLocation: document.getElementById("petlocation-input").value,
         petBreed: document.getElementById("petBreed-input").value
     }
+    Object.keys(petData).forEach((key) => {
+        let pet = "Datos: " + petData[key]
+        document.cookie = pet
+        console.log(document.cookie.split(";"))
+    })
+    
 }
