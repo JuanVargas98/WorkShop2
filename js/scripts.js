@@ -73,4 +73,5 @@ document.getElementById("petsave-button").onclick = function updateTable(){
         table.appendChild(titulo);
 
     
+    }
 }
