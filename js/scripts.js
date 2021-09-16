@@ -1,4 +1,5 @@
 var rowId = 0;
+
 document.getElementById("petsave-button").onclick = function updateTable(){
     rowId += 1
     let petData = {
@@ -11,8 +12,7 @@ document.getElementById("petsave-button").onclick = function updateTable(){
         petSex: document.getElementById("petsex-input").value,
         petDangerous: document.getElementById("petdangerous-input").value,
         esterilizacion: document.getElementById("esterilizacion-input").value,
-        petLocation: document.getElementById("petlocation-input").value,
-        //petBreed: document.getElementById("petBreed-input").value
+        petLocation: document.getElementById("petlocation-input").value
     }
     let tr = document.createElement("tr");
     tr.setAttribute("id","row"+rowId);
@@ -26,18 +26,9 @@ document.getElementById("petsave-button").onclick = function updateTable(){
     Object.keys(petData).forEach((key) => {
         num += 1
         let td = document.createElement("td");
-        inputs = document.createElement("input")
-        inputs.setAttribute("disabled", "true")
-        inputs.setAttribute("id", "pet" + num + ""+rowId);
-        inputs.setAttribute("size", "10")
-        inputs.setAttribute("style", "font-size: small; font-weight: bold")
-        inputs.setAttribute("placeholder", petData[key])
-        td.appendChild(inputs)
+        td.innerHTML = petData[key]
         tr.appendChild(td);
-        btnModificar.onclick = function () {
-            console.log("gg")
-            window.open("ListaMascotas.html" , "Ciudadanos de 4 patas", "width=800,height=350,scrollbars=NO")
-        }
+        
     });
     let tdActions = document.createElement("td");
 
@@ -70,7 +61,9 @@ document.getElementById("petsave-button").onclick = function updateTable(){
         }
         table.appendChild(titulo);
     }*/
-
+    btnModificar.onclick = function () {
+        
+    }
     Object.keys(petData).forEach((key) => {
         let pet = "Datos: " + petData[key]
         document.cookie = pet
@@ -83,32 +76,3 @@ document.getElementById("petsave-button").onclick = function updateTable(){
     
         
 }
-
-/*function renderizarTabla() {
-            var mascotas = [];
-            var table = document.getElementById("body-table");
-
-            while (table.firstChild) {
-
-                var aux = table.removeChild(table.firstChild);
-                var mascota = {
-
-                    dateInput: aux.cells[0].value,
-                    ownerInput: aux.cells[1].value,
-                    petNameInput: aux.cells[2].value,
-                    petMicrochip: aux.cells[3].value,
-                    petSpeciesInput: aux.cells[4].value,
-                    petSexInput: aux.cells[5].value,
-                    petSizeInput: aux.cells[6].value,
-                    petDangerourInput: aux.cells[7].value,
-                    petSterilization: aux.cells[8].value,
-                    petLocalidad: aux.cells[9].value,
-                }
-                mascotas.push(
-                    mascota
-                )
-            }
-            table.appendChild(titulo);
-
-        
-        }*/
