@@ -46,13 +46,13 @@ document.getElementById("petsave-button").onclick = function updateTable(){
 	   info["id"] = rowId;
 	   customerObjectStore.add(info);
 	 };
+
     let tr = document.createElement("tr");
     tr.setAttribute("id","row"+rowId);
 
     let tdId = document.createElement("td");
     tdId.innerHTML = rowId;
     tr.appendChild(tdId);
-    let inputs
     let num = 0
     let btnModificar = document.createElement("input");
     Object.keys(petData).forEach((key) => {
@@ -69,7 +69,7 @@ document.getElementById("petsave-button").onclick = function updateTable(){
     btnModificar.setAttribute("class", "btn btn-danger");
     btnModificar.value = "Modificar";
     
-    btnModificar.onclick = function () {
+    /*btnModificar.onclick = function () {
         window.open("ListaMastcotas.html", "Ciudadanos de 4 patas", "width=800,height=600,scrollbars=NO")
         var mascotas = [];
         var table = document.getElementById("body-table");
@@ -93,10 +93,7 @@ document.getElementById("petsave-button").onclick = function updateTable(){
             mascotas.push(mascota)
         }
         table.appendChild(titulo);
-    }
-    btnModificar.onclick = function() {
-        
-    }
+    }*/
     Object.keys(petData).forEach((key) => {
         let pet = "Datos: " + petData[key]
         document.cookie = pet
