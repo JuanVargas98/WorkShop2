@@ -36,7 +36,8 @@ document.getElementById("petsave-button").onclick = function updateTable(){
     btnModificar.setAttribute("type", "button");
     btnModificar.setAttribute("class", "btn btn-danger");
     btnModificar.value = "Modificar";
-    /*btnModificar.onclick = function () {
+    
+    btnModificar.onclick = function () {
         window.open("ListaMastcotas.html", "Ciudadanos de 4 patas", "width=800,height=600,scrollbars=NO")
         var mascotas = [];
         var table = document.getElementById("body-table");
@@ -45,23 +46,23 @@ document.getElementById("petsave-button").onclick = function updateTable(){
 
             var aux = table.removeChild(table.firstChild);
             var mascota = {
-
-                dateInput: aux.cells[0].value,
-                ownerInput: aux.cells[1].value,
-                petNameInput: aux.cells[2].value,
-                petMicrochip: aux.cells[3].value,
-                petSpeciesInput: aux.cells[4].value,
-                petSexInput: aux.cells[5].value,
-                petSizeInput: aux.cells[6].value,
-                petDangerourInput: aux.cells[7].value,
-                petSterilization: aux.cells[8].value,
-                petLocalidad: aux.cells[9].value,
+        
+                dateInput: aux.cells[0].innerText="",
+                ownerInput: aux.cells[1].innerText = "",
+                petNameInput: aux.cells[2].innerText = "",
+                petMicrochip: aux.cells[3].innerText = "",
+                petSpeciesInput: aux.cells[4].innerText = "",
+                petSexInput: aux.cells[5].innerText = "",
+                petSizeInput: aux.cells[6].innerText = "",
+                petDangerourInput: aux.cells[7].innerText = "",
+                petSterilization: aux.cells[8].innerText = "",
+                petLocalidad: aux.cells[9].innerText = "",
             }
             mascotas.push(mascota)
         }
         table.appendChild(titulo);
-    }*/
-    btnModificar.onclick = function () {
+    }
+    btnModificar.onclick = function() {
         
     }
     Object.keys(petData).forEach((key) => {
