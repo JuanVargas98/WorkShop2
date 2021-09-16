@@ -22,14 +22,13 @@
         <h1>Cuidadanos de 4 Patas</h1>
     </header>
 
-
-
     <div class="container">
         <div class="text-center">
-            <p style="font-size: 20px;"><b>Este es el formulario que debe diligenciar para registrar una nueva mascota</b></p>
+            <p style="font-size: 20px; margin-top: 5rem;"><b>Este es el formulario que debe diligenciar para registrar una nueva mascota</b></p>
         </div>
 
-        <div class="form-group was-validated">
+
+        <div class="form-group was-validated" style="margin-top: 7rem;">
             <div class="row">
                 <div class="col-xl-6 col-sm-12">
                     <label for="date-input" id="label-input1">Fecha de registro:</label><input class="form-control" id="date-input" type="date" required/>
@@ -124,125 +123,39 @@
         </div>
     </div>
 
-    <h1> Lista de Mascotas</h1>
-    <div class="container" style="margin-top: 5rem;">
-        <div class="table-responsive">
-            <table class="table table-bordered table-hover">
-                <thead class="thead-danger">
-                    <th class="column-header column-header-id">ID</th>
-                    <th class="column-header">Fecha de registro</th>
-                    <th class="column-header">Nombre del propietario</th>
-                    <th class="column-header">Nombre de la mascota</th>
-                    <th class="column-header">Microchip</th>
-                    <th class="column-header">Especie</th>
-                    <th class="column-header">Tamaño</th>
-                    <th class="column-header">Sexo</th>
-                    <th class="column-header">Dangerous</th>
-                    <th class="column-header">Esterilizacion</th>
-                    <th class="column-header">Localidad</th>
-                    <th class="column-header">Acciones</th>
-                </thead>
-                <tbody id="body-table">
-                    
-                </tbody>
-            </table>
-            
+        <h1> Lista de Mascotas</h1>
+        <div class="container" style="margin-top: 5rem;">
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover" style="background-color: rgb(177, 126, 18);">
+                    <thead class="thead-danger">
+                        <th class="column-header column-header-id">ID</th>
+                        <th class="column-header">Fecha de registro</th>
+                        <th class="column-header">Nombre del propietario</th>
+                        <th class="column-header">Nombre de la mascota</th>
+                        <th class="column-header">Microchip</th>
+                        <th class="column-header">Especie</th>
+                        <th class="column-header">Tamaño</th>
+                        <th class="column-header">Sexo</th>
+                        <th class="column-header">Dangerous</th>
+                        <th class="column-header">Esterilizacion</th>
+                        <th class="column-header">Localidad</th>
+                        <th class="column-header">Acciones</th>
+                    </thead>
+                </table>
+            </div>
         </div>
-    </div>
 
-    <h1>Filtros</h1>
-    <div class="container form-check"> 
-        <button class="btn btn-warning">Filtrar</button><br>
-        <input type="checkbox" class="form-check-input" id="SpecieCheck"><label class="form-check-label" for="SpecieCheck">Especie</label><br>
-        <input class="form-check-input" type="radio" id="specie-dog-check"><label class="form-check-label" for="specie-dog-check">Perro</label>
-        <input class="form-check-input" type="radio" id="specie-cat-check"><label class="form-check-label" for="specie-cat-check">Gato</label>
-    </div>
-    <div class="container form-check"> 
-        <input type="checkbox" class="form-check-input" id="sexCheck"><label class="form-check-label" for="sexCkeck">Sexo</label><br>
-        <input class="form-check-input" type="radio" id="sexM-check"><label class="form-check-label" for="sexM-check">Macho</label><br>
-        <input class="form-check-input" type="radio" id="sexH-check"><label class="form-check-label" for="sexH-check">Hembra</label>
-    </div>
-    <div class="container form-check"> 
-        <input type="checkbox" class="form-check-input" id="sizeCheck"><label class="form-check-label" for="sizeCheck">Tamaño</label><br>
-        <input class="form-check-input" type="radio" id="sizeM-check"><label class="form-check-label" for="sizeM-check">Miniatura</label><br>
-        <input class="form-check-input" type="radio" id="sizeP-check"><label class="form-check-label" for="sizePcheck">Pequeño</label><br>
-        <input class="form-check-input" type="radio" id="sizeMe-check"><label class="form-check-label" for="sizeMe-check">Mediano</label><br>
-        <input class="form-check-input" type="radio" id="sizeG-check"><label class="form-check-label" for="sizeG-check">Grande</label>
-    </div>
-    <div class="container form-check"> 
-        <input type="checkbox" class="form-check-input" id="sizeCheck"><label class="form-check-label" for="sizeCheck">Potencialmente Peligroso</label><br>
-        <input class="form-check-input" type="radio" id="dangerousS-check"><label class="form-check-label" for="dangerousS-check">Si</label><br>
-        <input class="form-check-input" type="radio" id="dangerousN-check"><label class="form-check-label" for="dangerousN-check">No</label><br>
-    </div>
+        <footer style="text-align: center; margin-top: 15rem;">
+
+            <p>Universidad el Bosque - Programacion II</p>
+            <p>Juan Vargas - Lucero Perez - Oscar florez</p>
+        </footer>
+    
     <div>
-        <section>
-            <label for="l">
-                NombrePripietario:
-            </label>
-            <input type="text" name="Nombre del propietario" id="">
-    
-            <label for="l">
-                NombreMascota:
-            </label>
-            <input type="text" name="Nombre de la mascota" id="">
-            <label for="l">
-                Microchip:
-            </label>
-            <input type="text" name="Nombre del propietario" id="">
-            <label for="l">
-                sexo:
-                <select>
-                    <OPTIOn>Macho</OPTIOn>
-                    <option>Hembra</option>
-                </select>
-                <label for="l">
-                    Tamaño:
-                    <select>
-                        <OPTIOn>Miniatura</OPTIOn>
-                        <option>Pequeño</option>
-                        <OPTIOn>Mediano</OPTIOn>
-                        <option>Grande</option>
-                    </select>
-                    <label for="l">
-                        Dangerous:
-                        <select>
-                            <OPTIOn>Si</OPTIOn>
-                            <option>No</option>
-                        </select>
-    
-                        <label for="l">
-                            Esterilizacion:
-                            <select>
-                                <OPTIOn>Si</OPTIOn>
-                                <option>No</option>
-                            </select>
-                            <label for="l"></label>
-                            Localidad:
-                            <select>
-                                <OPTIOn>Antonio Nariño</OPTIOn>
-                                <option>Barrios Unidos</option>
-                                <option>Bosa</option>
-                                <option>Chapinero</option>
-                                <option>Ciudad Bolivar</option>
-                                <option>Engativá</option>
-                                <option>Fontibón</option>
-                                <option>Kenedy</option>
-                                <option>La candelaria</option>
-                                <option>Los Mártires</option>
-                                <option>Puente Aranda</option>
-                                <option>Rafael Uribe Uribe</option>
-                                <option>San Cristóbal</option>
-                                <option>Santa Fe</option>
-                                <option>Suba</option>
-                                <option>Sumapaz</option>
-                                <option>Teusaquillo</option>
-                                <option>Tunjuelito</option>
-                                <option>Usaquén</option>
-                                <option>Usme</option>
-        </section>
+        
 
-        </section>
-    </div>-->
+       
+    </div>
     
         
 
