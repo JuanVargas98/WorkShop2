@@ -1,5 +1,51 @@
 var rowId = 0;
+var indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB || window.shimIndexedDB;
+const dbName = "petDB";
 
+var request = indexedDB.open(dbName, 2);
+
+request.onerror = function(event) {
+  console.log("Database error");
+};
+request.onupgradeneeded = function(event) {
+  var db = event.target.result;
+  var objectStore = db.createObjectStore("pets", { keyPath: "id" });
+  objectStore.createIndex("petNameInput", "petNameInput", { unique: false });
+};
+
+var request = indexedDB.open(dbName, 2);
+request.onsuccess = function(event) {
+	var db = event.target.result;
+	var tx = db.transaction("pets");
+	var objectStore = tx.objectStore("pets");
+	objectStore.getAll().onsuccess = function(event) {
+	  console.log(event.target.result);
+	  rowId = event.target.result.length;
+	};
+};
+
+document.getElementById("petsave-button").onclick = function updateTable(){
+    rowId += 1
+    let petData = {
+        dateRegister: document.getElementById("date-input").value,
+        ownerName: document.getElementById("owner-input").value,
+        petName: document.getElementById("petname-input").value,
+        petMicrochip: document.getElementById("petmicrochip-input").value,
+        petSpecies: document.getElementById("petspecies-input").value,
+        petSize: document.getElementById("petsize-input").value,
+        petSex: document.getElementById("petsex-input").value,
+        petDangerous: document.getElementById("petdangerous-input").value,
+        esterilizacion: document.getElementById("esterilizacion-input").value,
+        petLocation: document.getElementById("petlocation-input").value
+    }
+
+    var request = indexedDB.open(dbName, 2);
+	request.onsuccess = function(event) {
+	   var db = event.target.result;
+	   var customerObjectStore = db.transaction("pets", "readwrite").objectStore("pets");
+	   info["id"] = rowId;
+	   customerObjectStore.add(info);
+	 };
 document.getElementById("petsave-button").onclick = function updateTable(){
     rowId += 1
     let petData = {
