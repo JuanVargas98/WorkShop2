@@ -121,5 +121,5 @@ document.getElementById("petsave-button").onclick = function updateTable(){
 
     document.getElementById("body-table").appendChild(tr);
     
-        
+
 }
